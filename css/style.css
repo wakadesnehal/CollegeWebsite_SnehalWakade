@@ -131,8 +131,9 @@ h2{
     height: 2em;
     margin: 0 0.5em;
 }
-.social a{
+.social a, .social .socialimg a:hover{
     text-decoration: none;
+    border: none;
 }
 
 /* Media quiery for navbar */
