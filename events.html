@@ -55,7 +55,7 @@
     <div class="row">
         <div class="events">
             <div class="col-md-5 col-sm-6">
-                <img src="images/maharashtra_din.jpg" alt="Maharashtra Din" width="100%">
+                <img src="images/maharashtra_din.jpg" alt="Maharashtra Din" width="100%" class="event-img">
             </div>
             <div class="col-md-7 col-sm-6 event-details">
                 <h4>Maharashtra Din</h4>
@@ -77,13 +77,13 @@
                 </p>
             </div>
             <div class="col-md-5 col-sm-6">
-                <img src="images/ambedakarjaynti.jpg" alt="Ambedkar Jayanti" width="100%">
+                <img src="images/ambedakarjaynti.jpg" alt="Ambedkar Jayanti" width="100%" class="event-img">
             </div>
         </div>
         <hr>
         <div class="events">
             <div class="col-md-5 col-sm-6">
-                <img src="images/worldhealthday.jpg" alt="World Health Day" width="100%">
+                <img src="images/worldhealthday.jpg" alt="World Health Day" width="100%" class="event-img">
             </div>
             <div class="col-md-7 col-sm-6 event-details">
                 <h4>World Health Day...</h4>
@@ -97,20 +97,20 @@
         </div>
         <hr>
         <div class="events">
-            <div class="col-md-7 col-sm-6">
+            <div class="col-md-7 col-sm-6 event-details">
                 <h4>Visit to Museum</h4>
                 <p>
                     Visits are always beautiful and fill a person’s mind with joy and enthusiasm. But if that visit is educational, learning based, that provides us invaluable knowledge as well.
                 </p>
             </div>
             <div class="col-md-5 col-sm-6">
-                <img src="images/museumsvisit.png" alt="Maharashtra Din" width="100%">
+                <img src="images/museumsvisit.png" alt="Maharashtra Din" width="100%" class="event-img">
             </div>
         </div>
         <hr>
         <div class="events">
             <div class="col-md-5 col-sm-6">
-                <img src="images/annualday.png" alt="Maharashtra Din" width="100%">
+                <img src="images/annualday.png" alt="Maharashtra Din" width="100%" class="event-img">
             </div>
             <div class="col-md-7 col-sm-6 event-details">
                 <h4>Annual Day</h4>
@@ -123,7 +123,7 @@
         </div>
         <hr>
         <div class="events">
-            <div class="col-md-7 col-sm-6">
+            <div class="col-md-7 col-sm-6 event-details">
                 <h4>Makarsankranti Celebration</h4>
                 <p>
                     On this occasion, a cultural program was jointly organized by the students of various colleges, in which the 
@@ -131,13 +131,13 @@
                 </p>
             </div>
             <div class="col-md-5 col-sm-6">
-                <img src="images/makarsankranti.png" alt="Maharashtra Din" width="100%">
+                <img src="images/makarsankranti.png" alt="Maharashtra Din" width="100%" class="event-img">
             </div>
         </div>
         <hr>
         <div class="events">
             <div class="col-md-5 col-sm-6">
-                <img src="images/sportday.png" alt="Maharashtra Din" width="100%">
+                <img src="images/sportday.png" alt="Maharashtra Din" width="100%" class="event-img">
             </div>
             <div class="col-md-7 col-sm-6 event-details">
                 <h4>Sport Day</h4>
@@ -182,6 +182,15 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function(){
+            $('.event-img').mouseover(function(){
+                $(this).fadeToggle(2000, function(){
+                    $(this).fadeIn(2500);
+                });
+            });
+        });
+    </script>
 </body>
 </html>

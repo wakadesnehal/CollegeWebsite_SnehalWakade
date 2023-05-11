@@ -18,6 +18,7 @@
         .banner img{
             width: 100%;
             transition: 5s; 
+            height: 600px;
         }
         .updates{
             background-color: #fcfafa;
@@ -109,7 +110,7 @@
 <body>
     <header class="">
         <img src="images/logo4.png" class="img-fluid" width="120">
-        <a class="mobmenu"><i class="fa-solid fa-bars fa-2xl"></i></a>
+        <a class="mobmenu" id="mobmenu"><i class="fa-solid fa-bars fa-2xl"></i></a>
         <nav>
             <ul>
                 <li class="active"><a href="#">Home</a></li>
@@ -122,12 +123,7 @@
         </nav>
     </header>
     <section class="banner">
-        <div >
-            <img src="images/Banner2.png" alt="Banner image of Dream college website.">
-        </div>
-        <!-- <div>
-            <img src="images/Banner1.png" alt="Banner image of Dream collge website.">
-        </div> -->
+            <img src="images/Banner2.png" alt="A great place of education." id="slideshow">
     </section>
     <section class="container-fluid updates">
         <div class="row">
@@ -237,5 +233,40 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        let imgNode=document.getElementById("slideshow");
+        let imageArray=[
+            {
+                path:"images/Banner1.png",
+                altMessage:"this is where it starts."
+            },
+            {
+                path:"images/Banner2.png",
+                altMessage:"A great place of education."
+            },
+           
+        ]
+        i=0;
+        setInterval(function(){
+            imgNode.src=imageArray[i].path;
+            imgNode.alt=imageArray[i].altMessage;
+            i++;
+            if(i==imageArray.length)
+                i=0;
+        }, 5000);
+    </script>
+    <script>
+        $(function(){
+            $("#mobmenu").click(function(){
+                let status=$('nav').css('display');
+                console.log(status);
+                if(status=="block")
+                    $('nav').css({display:"none"});
+                else
+                $('nav').css({display:"block"});
+            });
+        });
+    </script>
 </body>
 </html>

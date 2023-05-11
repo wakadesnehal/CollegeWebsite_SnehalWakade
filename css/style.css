@@ -142,8 +142,11 @@ h2{
     margin-top: 20px;
 }
 @media screen and (max-width: 768px){
-    header, nav{
+    header{
         display: block;
+    }
+    nav{
+        display: none;
     }
     nav ul{
         display: block;
@@ -151,10 +154,10 @@ h2{
     }
     .mobmenu{
         display: inline;
-        
     }
     .social .socialimg{
         position: relative;
         left: 0;
     }
+    
 }

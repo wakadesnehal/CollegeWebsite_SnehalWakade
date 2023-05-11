@@ -28,6 +28,31 @@
         .gallery img:hover{
             opacity: 1;
         }
+        .zoomimg {
+        cursor: pointer;
+        }
+
+        .zoomedimg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .zoomedimg img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+        border: 1px solid #7F0202;
+        border-radius: 11px;
+        }
+
     </style>
 </head>
 <body>
@@ -47,16 +72,20 @@
     <section class="mb-5 p-5">
         <h2 class="text-center mt-5 mb-5">Gallery</h2>
         <div class="gallery">
-                <div><img src="images/gallery-3.png" alt="Team work in college events"></div>
-                <div><img src="images/gallery-4.png" alt="New ideas and technology use for teaching"></div>
-                <div><img src="images/gallery-5.png" alt="growing with World"></div>
-                <div><img src="images/gallery-1.jpg" alt="Good college infrastructure"></div>
-                <div><img src="images/gallery-2.jpg" alt="big library with all new things."></div>
-                <div><img src="images/Advantages-pana.png" alt="Features of Deam College"></div>
-                <div><img src="images/Certification-pana.png" alt="A+ Certificated college"></div>
-                <div><img src="images/Helping a partner-pana.png" alt="Teachers helps students to slove their problems."></div>
-                <div><img src="images/gallery-1.jpg" alt="Good college infrastructure"></div>
-                <div><img src="images/gallery-2.jpg" alt="big library with all new things."></div>
+                <div>
+                    <img src="images/gallery-3.png" alt="Team work in college events" class="zoomimg">
+                </div>
+                <div>
+                    <img src="images/gallery-4.png" alt="New ideas and technology use for teaching" class="zoomimg">
+                </div>
+                <div><img src="images/gallery-5.png" alt="growing with World" class="zoomimg"></div>
+                <div><img src="images/gallery-1.jpg" alt="Good college infrastructure" class="zoomimg"></div>
+                <div><img src="images/gallery-2.jpg" alt="big library with all new things." class="zoomimg"></div>
+                <div><img src="images/Advantages-pana.png" alt="Features of Deam College" class="zoomimg"></div>
+                <div><img src="images/Certification-pana.png" alt="A+ Certificated college" class="zoomimg"></div>
+                <div><img src="images/Helping a partner-pana.png" alt="Teachers helps students to slove their problems." class="zoomimg"></div>
+                <div><img src="images/gallery-1.jpg" alt="Good college infrastructure" class="zoomimg"></div>
+                <div><img src="images/gallery-2.jpg" alt="big library with all new things." class="zoomimg"></div>
         </div>
     </section>
     <footer>
@@ -90,5 +119,18 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.zoomimg').on('click', function() {
+                var imageUrl = $(this).attr('src');
+                var zoomedImage = $('<div class="zoomedimg"><img src="' + imageUrl + '"></div>');
+                $('body').append(zoomedImage);
+                $('.zoomedimg').on('click', function() {
+                $(this).remove();
+                });
+            });
+        });
+    </script>
 </body>
 </html>
