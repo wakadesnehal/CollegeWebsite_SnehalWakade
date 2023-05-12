@@ -185,7 +185,6 @@
     </section>
     <section class="container-fluid gallery text-center">
         <div class="pt-5 pb-5">
-            
             <div class="row">
                 <h2>Gallery</h2>
                 <div class="subheading"></div>
@@ -234,6 +233,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.6.4.min.js"></script>
     <script>
+        // banner slideshow script
         let imgNode=document.getElementById("slideshow");
         let imageArray=[
             {
@@ -259,6 +259,7 @@
         }, 5000);
     </script>
     <script>
+        //script for menu in small device
         $(function(){
             $("#mobmenu").click(function(){
                 let status=$('nav').css('display');
