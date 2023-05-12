@@ -63,15 +63,15 @@ function validate3(){
     let phonePattern= new RegExp("^[0-9]*$");
     phoneNode.css({border:"2px solid red"});
     if(phone==""){
-        errorNode3.text("Phone number is required");
+        errorNode3.text("Mobile number is required");
         return false
     }
     else if(phonePattern.test(phone)==false){
-        errorNode3.text("Phone number must have only numbers");
+        errorNode3.text("Mobile number must have only numbers");
         return false
     }
     else if(phone.length<10 || phone.length>10){
-        errorNode3.text("Phone number must contain 10 digits only.");
+        errorNode3.text("Mobile number must contain 10 digits only.");
         return false
     }
     else{
