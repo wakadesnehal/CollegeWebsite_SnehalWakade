@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); 
+
 @font-face {
     font-family: Carter_One;
     src: url(../fonts/Carter_One/CarterOne-Regular.ttf);
@@ -22,7 +24,7 @@
 *, body{
     padding: 0;
     margin: 0;
-    font-family: Lato-regular;
+   font-family: 'Lato-regular','Open Sans', sans-serif;
 }
 .bg1{
     background-color: #fcfafa;
@@ -32,14 +34,14 @@
 } */
 ul li a{
     color: #7F0202;
-    font-family: Lato-black;
+    font-family: 'Lato-black', 'Open Sans', sans-serif;
 }
 ul li a:hover{
     color: #7F0202;
 }
 h1,h2,h3,h4,h5{
     color: #7F0202;
-    font-family: Lato-black;
+    font-family: 'Lato-black', 'Open Sans', sans-serif;
 }
 header{
     width: 100%;
