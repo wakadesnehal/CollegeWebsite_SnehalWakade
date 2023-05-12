@@ -108,10 +108,12 @@ function validateForm(){
                     break;
                 }
             }
-    let value=(flag1 && flag2  && flag3 && flag4);
-    if(value=='true'){
+    let FlagValue=(flag1 && flag2  && flag3 && flag4);
+    console.log(FlagValue);
+    if(FlagValue==true){
         alert("Thank you for connecting with us.");
     }
-    return (value)
+
+    return (FlagValue)
 }
 
