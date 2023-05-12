@@ -16,10 +16,12 @@
     border: 2px solid #7F0202;
     border-radius: 11px;
     padding: 0.5em 0.5em 0;
-    margin-bottom: 20px ;
-    margin-left: 8em;
-    width:80%;
-    }   
+    }  
+    .admission details{
+        margin-bottom: 20px ;
+        margin-left: 8em;
+        width:80%;
+    } 
     summary {
         font-size: 18px;
         margin: -0.5em -0.5em 0;
@@ -27,7 +29,6 @@
         font-family: Lato-bold;
         color: #7F0202;
     }
-    
     details[open] {
         padding: 0.5em;
     }
@@ -123,63 +124,59 @@
     </section>
     <hr>
     <section>
-        <div class="container  mb-5">
-            <h2 class="mt-5 mb-5">Syllabus</h2>
-            <details>
-                <summary> Science: <i class="fa-solid fa-caret-down fa-2xl"></i></summary>
-                <ol>
-                    <li>Mathematics</li>
-                    <li>
-                        Biology
-                    </li>
-                    <li>
-                        Physics
-                    </li>
-                    <li>
-                        Chemistry
-                    </li>
-                    <li>Information Technology</li>
-                    <li>English</li>
-                </ol>
-            </details>
-            <details>
-                <summary> Commerce: <i class="fa-solid fa-caret-down fa-2xl"></i></summary>
-                <ol>
-                    <li>Mathematics
-                    </li>
-                    <li>
-                        English
-                    </li>
-                    <li>
-                        Accountancy
-                    </li>
-                    <li>
-                        Geography
-                    </li>
-                    <li>
-                        Economics
-                    </li>
-                </ol>
-            </details>
-            <details>
-                <summary> Arts: <i class="fa-solid fa-caret-down fa-2xl"></i></summary>
-                <ol>
-                    <li>Geography
-                    </li>
-                    <li>
-                        Marathi
-                    </li>
-                    <li>
-                        Hindi
-                    </li>
-                    <li>
-                        Sanskrit
-                    </li>
-                    <li>
-                        Economics
-                    </li>
-                </ol>
-            </details>
+        <h2 class="mt-5 mb-5">Syllabus</h2>
+        <div class="container mb-5 syllabus">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <details>
+                        <summary> Science: <i class="fa-solid fa-caret-down fa-2xl"></i></summary>
+                        <ol>
+                            <li>Mathematics</li>
+                            <li> Biology </li>
+                            <li> Physics</li>
+                            <li> Chemistry </li>
+                            <li>Information Technology</li>
+                            <li>English</li>
+                            <li>Marathi</li>
+                            <li>Hindi</li>
+                            <li>Information Technology</li>
+                        </ol>
+                    </details>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <details>
+                        <!-- <summary> Commerce: <i class="fa-solid fa-caret-down fa-2xl"></i></summary> -->
+                        <summary> Commerce: <i class="fa-solid fa-caret-down fa-2xl"></i></summary>
+                        <ol>
+                            <li> Mathematics / Information Technology </li>
+                            <li>English </li>
+                            <li>Accountancy</li>
+                            <li>  Economics </li>
+                            <li>Financial Accounting </li>
+                            <li>Business Studies </li>
+                            <li> Marketing</li>
+                            <li>Business Law </li>
+                        </ol>
+                    </details>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <details>
+                        <summary> Arts: <i class="fa-solid fa-caret-down fa-2xl"></i></summary>
+                        <ol>
+                            <li>Geography </li>
+                            <li> History</li>
+                            <li>Hindi </li>
+                            <li> political Science </li>
+                            <li>Economics</li>
+                            <li>Sociology</li>
+                            <li>philosophy</li>
+                            <li>psychology</li>
+                            <li>computer Science</li>
+                            <li>Regional language</li>
+                        </ol>
+                    </details>
+                </div>
+            </div>
         </div>
     </section>
     <hr>
@@ -193,7 +190,7 @@
                 </div>
                 <div class="col-md-3 col-sm-12 table-box">
                     <h5>Commerce</h5>
-                    <a href="documents/TIMETABLE.pdf" target="_blank" class="btn-view"> View</a>
+                    <a href="documents/Comm-TIMETABLE.pdf" target="_blank" class="btn-view"> View</a>
                 </div>
                 <div class="col-md-3 col-sm-12 table-box">
                     <h5>Arts</h5>
@@ -219,7 +216,6 @@
             <div class="col-md-3 col-sm-12">
                 <ul>
                     <li><a href="events.html">Events</a></li>
-                      
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -232,8 +228,6 @@
         <p><small>&copy; 2023. Design and Developed by Dream College</small></p>
     </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

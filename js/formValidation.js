@@ -96,11 +96,11 @@ function validate4(){
 
 let nodeArray=[fnameNode,emailNode,phoneNode,msgNode];
 function validateForm(){
-    let flag1=validate1();
-    let flag2=validate2();
-    let flag3=validate3();
-    let flag4=validate4();
-
+    var flag1=validate1();
+    var flag2=validate2();
+    var flag3=validate3();
+    var flag4=validate4();
+    
     let flagArray=[flag1,flag2,flag3,flag4];
         for(let i=0;i<flagArray.length;i++){
                 if(flagArray[i]==false){
@@ -108,5 +108,10 @@ function validateForm(){
                     break;
                 }
             }
-    return (flag1 && flag2  && flag3 && flag4)
+    let value=(flag1 && flag2  && flag3 && flag4);
+    if(value=='true'){
+        alert("Thank you for connecting with us.");
+    }
+    return (value)
 }
+
