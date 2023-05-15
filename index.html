@@ -275,7 +275,12 @@
             {
                 path:"images/Banner4.jpg",
                 altMessage:"Join Dream college."
+            },
+            {
+                path:"images/Banner1.png",
+                altMessage:"A great place of education."
             }
+
         ]
         i=0;
         setInterval(function(){
@@ -286,9 +291,7 @@
                 i=0;
         }, 5000);
         function plusSlides(n){
-            console.log(n);
             i=i+n;
-            console.log(i);
             if(i==imageArray.length || i<0)
                 i=0;
             imgNode.src=imageArray[i].path;
