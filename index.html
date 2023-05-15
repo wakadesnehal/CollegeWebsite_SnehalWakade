@@ -19,6 +19,38 @@
             transition: 5s; 
             height: 650px;
         }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 11px;
+            user-select: none;
+            background-color: #7F0202;
+            border: 2px solid #f99e48;
+            }
+
+        /* Position the "next button" to the right */
+        .next {
+        right: 0;
+        }
+
+        /* Position the "next button" to the right */
+        .prev {
+        left: 0;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+        background-color: #f99e48;
+        border: 2px solid #7F0202;
+        color: #7F0202;
+        }
         .updates{
             background-color: #fcfafa;
         }
@@ -123,6 +155,8 @@
     </header>
     <section class="banner">
             <img src="images/Banner1.png" alt="A great place of education." id="slideshow">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </section>
     <section class="container-fluid updates">
         <div class="row">
@@ -256,6 +290,10 @@
             if(i==imageArray.length)
                 i=0;
         }, 5000);
+        function plusSlides(n){
+            imgNode.src=imageArray[i+n].path;
+            imgNode.alt=imageArray[i+n].altMessage;
+        }
     </script>
     <script>
         //script for menu in small device
