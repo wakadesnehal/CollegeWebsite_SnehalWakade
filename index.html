@@ -286,8 +286,13 @@
                 i=0;
         }, 5000);
         function plusSlides(n){
-            imgNode.src=imageArray[i+n].path;
-            imgNode.alt=imageArray[i+n].altMessage;
+            console.log(n);
+            i=i+n;
+            console.log(i);
+            if(i==imageArray.length || i<0)
+                i=0;
+            imgNode.src=imageArray[i].path;
+            imgNode.alt=imageArray[i].altMessage;
         }
     </script>
     <script>
